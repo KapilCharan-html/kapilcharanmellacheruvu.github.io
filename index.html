@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapil Charan Mellacheruvu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fade-in reveal">
+        <h1>Hi, I'm <span>Kapil Charan Mellacheruvu</span> 👋</h1>
+        <p>AI/ML Enthusiast | Generative AI Intern at Tech Mahindra | CSE 3rd Year</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="slide-down reveal">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in reveal">
+        <h2>About Me</h2>
+        <p>
+            I'm a passionate Computer Science Engineering student with hands-on experience in AI/ML,
+            computer vision, web development, and networking. I enjoy building innovative applications
+            and experimenting with emerging technologies.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in reveal">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card hover-up reveal">
+                <h3>🎮 Hill Climb Using Hand Gestures</h3>
+                <p>Developed a game control system using computer vision to detect hand gestures,
+                enabling gesture-based navigation for the Hill Climb Racing game.</p>
+            </div>
+
+            <div class="project-card hover-up reveal">
+                <h3>☀️ Weather App</h3>
+                <p>Built a responsive weather application using OpenWeather API to display real-time
+                temperature, humidity, and forecast details for any location.</p>
+            </div>
+
+            <div class="project-card hover-up reveal">
+                <h3>🎬 Movie Recommendation System</h3>
+                <p>Created a machine learning-based recommendation engine using collaborative
+                filtering to suggest movies based on user preferences and history.</p>
+            </div>
+
+            <div class="project-card hover-up reveal">
+                <h3>💻 Java Hibernate Web App</h3>
+                <p>Developed a JSP/Servlet-based web application using Hibernate ORM and 
+                MySQL for seamless data management in a student portal system.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in reveal">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:kapil@example.com">kapil@example.com</a></p>
+        <a class="btn" href="mailto:kapil@example.com">Send Message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="slide-up reveal">
+        &copy; 2025 Kapil Charan Mellacheruvu | Hosted on GitHub Pages
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 100; // Trigger earlier or later by adjusting
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Run on page load
+    </script>
+
+</body>
+</html>
